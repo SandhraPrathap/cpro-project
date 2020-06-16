@@ -22,7 +22,7 @@ void pro(int a[20][20], int b[20][20], int n, int m, int t)
                 c[i][j] += a[i][k] * b[k][j];
         }
     }
-    print(n,t,c);
+    print(n, t, c);
 }
 void sum(int a[20][20], int b[20][20], int n, int m)
 {

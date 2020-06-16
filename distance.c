@@ -1,16 +1,22 @@
-#include<stdio.h>
-struct Dist
+#include <stdio.h>
+#include<math.h>
+struct point
 {
-    int d;
+    int x;
+    int y;
 };
 void main()
 
-{struct Dist dist1, dist2;
-int s;
-printf("Enter dist 1 and 2\n");
-scanf("%d",&dist1.d);
-scanf("%d",&dist2.d);
-s=dist1.d+dist2.d;
-printf("%d",s);
-     
+{
+    struct point p1, p2;
+    float s;
+    printf("Enter point 1 and 2\n");
+    scanf("%d %d", &p1.x,&p1.x);
+    scanf("%d %d", &p2.x,&p2.y);
+    float a=(p2.x-p1.x)*(p2.x-p1.x);
+    a+=(p2.y-p1.y)*(p2.y-p1.y); 
+    s =sqrt(a);
+    printf("Distance:%f", s);
 }
+
+

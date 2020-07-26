@@ -1,3 +1,6 @@
+/*5.Write a C program to:
+    Read a string(ending with a $ symbol),store it in an array and count the number of vowels,
+    consonants and spaces in it*/
 #include <stdio.h>
 void main()
 {

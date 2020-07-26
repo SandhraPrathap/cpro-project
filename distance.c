@@ -1,22 +1,19 @@
+/*6.Write a C program to :
+    Read 2 input each representing the distances between 2 points in the euclidean space,
+    store these in structure variables and add the two distance values */
 #include <stdio.h>
-#include<math.h>
-struct point
+struct Point
 {
-    int x;
-    int y;
-};
-void main()
-
+    int dist;
+} p1, p2, p3;
+int main()
 {
-    struct point p1, p2;
-    float s;
-    printf("Enter point 1 and 2\n");
-    scanf("%d %d", &p1.x,&p1.x);
-    scanf("%d %d", &p2.x,&p2.y);
-    float a=(p2.x-p1.x)*(p2.x-p1.x);
-    a+=(p2.y-p1.y)*(p2.y-p1.y); 
-    s =sqrt(a);
-    printf("Distance:%f", s);
+    printf("Enter the first distance\n");
+    scanf("%d", &p1.dist);
+    printf("Enter the second distance\n");
+    scanf("%d", &p2.dist);
+    p3.dist = p1.dist + p2.dist;
+    
+    printf("total distance\n");
+    printf("%d\n", p3.dist);
 }
-
-

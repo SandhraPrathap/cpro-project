@@ -19,10 +19,9 @@ void bsort(int a[], int n)
 void main()
 {
     int n;
-    int *a;
+    int a[25];
     printf("Enter the no. of elements\n");
     scanf("%d", &n);
-    a = (int *)malloc(sizeof(int) * n);
     printf("Enter the elements\n");
     for (int i = 0; i < n; i++)
         scanf("%d", &a[i]);

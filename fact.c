@@ -1,12 +1,19 @@
+/*
+09) Write a C-program to:
+Find the factorial of a given Natural Number n using:
+i) recursive function
+ii) non recursive function
+*/
+
 #include <stdio.h>
 
-long dino(long n)
+long recfact(long n)
 {
     if (n == 1)
         return 1;
-    return n * dino(n - 1);
+    return n * recfact(n - 1);
 }
-long fact(long n)
+long nonrecfact(long n)
 {
     long s = 1;
     for (int i = n; i > 0; i--)
@@ -20,6 +27,6 @@ void main()
     long n;
     printf("Enter n\n");
     scanf("%ld", &n);
-    printf("recursive %ld\n", dino(n));
-    printf("non-recursive %ld\n", fact(n));
+    printf("recursive %ld\n", recfact(n));
+    printf("non-recursive %ld\n", nonrecfact(n));
 }

@@ -1,4 +1,12 @@
 #include <stdio.h>
+void read(int n, int m, int a[20][20])
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+            scanf("%d", &a[i][j]);
+    }
+}
 void print(int n, int m, int c[20][20])
 {
     for (int i = 0; i < n; i++)
@@ -9,7 +17,7 @@ void print(int n, int m, int c[20][20])
     }
 }
 
-void pro(int a[20][20], int b[20][20], int n, int m, int t)
+void product(int a[20][20], int b[20][20], int n, int m, int t)
 {
     int c[20][20];
 
@@ -58,20 +66,13 @@ void main()
         printf("Enter the no. of rows and columns of first matrix\n");
         scanf("%d%d", &n, &m);
         printf("Enter first matrix\n");
-        for (i = 0; i < n; i++)
-        {
-            for (j = 0; j < m; j++)
-                scanf("%d", &a[i][j]);
-        }
+        read(n, m, a);
+
         printf("Enter no. of rows and column of second matrix\n");
         scanf("%d%d", &s, &t);
         printf("Enter second matrix\n");
 
-        for (i = 0; i < s; i++)
-        {
-            for (j = 0; j < t; j++)
-                scanf("%d", &b[i][j]);
-        }
+        read(s, t, b);
         if (n == s && m == t)
         {
             printf("sum:\n");
@@ -85,11 +86,7 @@ void main()
         printf("Enter the no. of rows and columns of  matrix\n");
         scanf("%d%d", &n, &m);
         printf("Enter first matrix\n");
-        for (i = 0; i < n; i++)
-        {
-            for (j = 0; j < m; j++)
-                scanf("%d", &a[i][j]);
-        }
+        read(n, m, a);
         trans(a, n, m);
         break;
 
@@ -97,24 +94,16 @@ void main()
         printf("Enter the no. of rows and columns of first matrix\n");
         scanf("%d%d", &n, &m);
         printf("Enter first matrix\n");
-        for (i = 0; i < n; i++)
-        {
-            for (j = 0; j < m; j++)
-                scanf("%d", &a[i][j]);
-        }
+        read(n, m, a);
         printf("Enter no. of rows and column of second matrix\n");
         scanf("%d%d", &s, &t);
         printf("Enter second matrix\n");
 
-        for (i = 0; i < s; i++)
-        {
-            for (j = 0; j < t; j++)
-                scanf("%d", &b[i][j]);
-        }
+        read(s,t,b);
         if (s == m)
         {
             printf("Product:\n");
-            pro(a, b, n, m, t);
+            product(a, b, n, m, t);
         }
         else
             printf("invalid \n");

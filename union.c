@@ -1,3 +1,7 @@
+/*08) Write a C-program to:
+Declare a union containing 5 string variables (Name, House Name, City Name, State and Pin
+code) each with a length of C_SIZE (user defined constant). Then, read and display the
+address of a person using a variable of the union.*/
 #include <stdio.h>
 #define C_SIZE 50
 union address {
@@ -7,12 +11,13 @@ union address {
     char state[C_SIZE];
     char pincode[C_SIZE];
 
-} u[5]; 
+} u[5];
 
 void main()
-{printf("Enter the details\n");
-
-// Each field is read into a seperate variable because one union variable can only store one member at a time.
+{
+    printf("Enter the details\n");
+    // Each field is read into a seperate variable
+    // Because one union variable can only store one member at a time.
     scanf("%s", u[0].name);
     scanf("%s", u[1].housename);
     scanf("%s", u[2].cityname);

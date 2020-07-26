@@ -1,3 +1,6 @@
+/*10) Write a C-program to:
+Read a string (word), store it in an array and obtain its reverse by using a user defined
+function.*/
 #include <stdio.h>
 #include <string.h>
 void rev(char a[50], int n)
